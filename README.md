@@ -1,1 +1,1 @@
-# Stroke-Prediction
+# Classification model: Stroke Prediction
