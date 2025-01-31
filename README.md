@@ -1,7 +1,31 @@
 # Classification model: Stroke Prediction
 
-#  A model for predicting the risk of stroke in a patient 
-'''
+# A model for predicting the risk of stroke in a patient
+
+## Dataset
+
+**The dataset used for this project has the following characteristics:**
+
+- **https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset**
+- format: `.csv`;
+- contains the following key columns: `gender`, `age`, `hypertension`, `stroke`, etc.
+
+This dataset contains **_ rental properties with _** different characteristics:
+
+- **id**: unique identifier;
+- **gender**: the patient's gender ("Male", "Female" or "Other");
+- **age**: patient's age;
+- **hypertension**: the presence of hypertension (0 - no, 1 - yes);
+- **heart_disease**: presence of heart disease (0 - no, 1 - yes);
+- **ever_married**: marriage status ("No" or "Yes");
+- **work_type**: type of work ("children", "Govt_jov", "Never_worked", "Private" or "Self-employed");
+- **residence_type**: type of residence ("Rural" or "Urban");
+- **avg_glucose_level**: average blood glucose level;
+- **bmi**: body mass index;
+- **smoking_status**: smoking status ("formerly smoked", "never smoked", "smokes" or "Unknown");
+- **stroke**: whether a stroke has occurred (0 - no, 1 - yes).
+
+<!--
 This project was developed to determine the cost of rent in Brazil. The interactive interface is based on [**Streamlit**](https://rent-brazil1.streamlit.app/), which allows you to easily interact with the model and analyze the results.
 
 <img src="images/4.jpg" alt="море" width="500" height="300">
@@ -236,4 +260,4 @@ docker stop <container_id>
 ```
 
 Where <container_id> is your container's identifier, obtained from the docker ps command.
-'''
+''' -->
