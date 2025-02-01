@@ -10,7 +10,7 @@
 - format: `.csv`;
 - contains the following key columns: `gender`, `age`, `hypertension`, `stroke`, etc.
 
-This dataset contains **_ rental properties with _** different characteristics:
+This dataset contains 5110 rows with 12 different characteristics:
 
 - **id**: unique identifier;
 - **gender**: the patient's gender ("Male", "Female" or "Other");
@@ -19,7 +19,7 @@ This dataset contains **_ rental properties with _** different characteristics:
 - **heart_disease**: presence of heart disease (0 - no, 1 - yes);
 - **ever_married**: marriage status ("No" or "Yes");
 - **work_type**: type of work ("children", "Govt_jov", "Never_worked", "Private" or "Self-employed");
-- **residence_type**: type of residence ("Rural" or "Urban");
+- **Residence_type**: type of residence ("Rural" or "Urban");
 - **avg_glucose_level**: average blood glucose level;
 - **bmi**: body mass index;
 - **smoking_status**: smoking status ("formerly smoked", "never smoked", "smokes" or "Unknown");
