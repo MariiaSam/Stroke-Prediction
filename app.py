@@ -1,6 +1,5 @@
 import streamlit as st
 import joblib
-import numpy as np
 import pandas as pd
 
 
@@ -32,28 +31,22 @@ def main():
     with st.form("data_form"):
         st.header("Введіть дані")
 
-        gender = st.selectbox('gender', ["Male", "Female"])
-        age = st.number_input('age', min_value=0)
-        hypertension = st.selectbox('hypertension', [0, 1])
-        heart_disease = st.selectbox('heart_disease', [0, 1])
-        ever_married = st.selectbox('ever_married', ["No", "Yes"])
-        work_type = st.selectbox('work_type', ["children", "Govt_jov", "Never_worked", "Private", "Self-employed"] )
-        Residence_type = st.selectbox('Residence_type', ["Rural", "Urban"])
-        avg_glucose_level = st.number_input('avg_glucose_level', min_value=0 )
-        bmi =  st.number_input('bmi', min_value=0)
-        smoking_status = st.selectbox('smoking_status', ["formerly smoked", "never smoked", "smokes", "Unknown"]
-    
+        gender = st.selectbox('Gender', ["Male", "Female"], index=None, help='Patient`s gender', label_visibility="visible", placeholder="Choose patient`s gender")
+        age = st.number_input('Age', min_value=0, value=None, help='Patient`s age', placeholder="What is the patient's age?")
+        hypertension = st.selectbox('The presence of hypertension', [0, 1], index=None, help='(0 - no, 1 - yes)', label_visibility="visible", placeholder="Does the patient have hypertension?")
+        heart_disease = st.selectbox('The presence of heart disease', [0, 1], index=None, help='(0 - no, 1 - yes)', label_visibility="visible", placeholder="Does the patient have heart disease?")
+        ever_married = st.selectbox('Does the patient have a marriage?', ["No", "Yes"], index=None, help='"No", "Yes"', label_visibility="visible", placeholder="Does the patient have a marriage?")
+        work_type = st.selectbox('Patient`s occupation', ["Children", "Govt_jov", "Never_worked", "Private", "Self-employed"], index=None, label_visibility="visible", placeholder="Patient's occupation" )
+        Residence_type = st.selectbox('Patient`s place of residence', ["Rural", "Urban"], index=None, label_visibility="visible", placeholder="Patient's place of residence" )
+        avg_glucose_level = st.number_input('avg_glucose_level',  min_value=0,  value=None, help='Patient`s averageblood glucose level', placeholder="What is the average blood glucose level?")
+        bmi =  st.number_input('Body mass index', min_value=0,  value=None, help='Patient`s bmi', placeholder="What is the patient's bmi?")
+        smoking_status = st.selectbox('Smoking status of the patient', ["Formerly smoked", "Never smoked", "Smokes", "Unknown"], index=None, label_visibility="visible", placeholder="Does the patient smoke?"
     )
-        # "Підписник кіно-пакету",
-        # [0, 1],
-        # help="0 - Ні, 1 - Так.
 
+        btn = st.form_submit_button("Check")
 
-        submitted = st.form_submit_button("Передбачити")
-
-        if submitted:
+        if btn:
             
-            # Підготовка даних для моделі
             input_data = pd.DataFrame({
                 "gender": [gender],
                 "age": [age],
@@ -75,9 +68,9 @@ def main():
             probability = logistic_model.predict_proba(processed_data.values)
 
             if prediction[0] == 1:
-                st.error(f"Пацієнт з відповідним ознаками має високу ймовірність інсульту ({probability[0][1]*100:.2f}%).")
+                st.error(f"A patient with the relevant features has a high probability of stroke({probability[0][1]*100:.2f}%).")
             else:
-                st.success(f"Пацієнт маж низьку йомвірність інсульту({probability[0][1]*100:.2f}%).")
+                st.success(f"Patient has a low probability of stroke({probability[0][1]*100:.2f}%).")
 
 if __name__ == "__main__":
     main()
