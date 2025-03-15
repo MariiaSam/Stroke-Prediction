@@ -2,6 +2,38 @@
 
 # A model for predicting the risk of stroke in a patient
 
+This project was developed to determine the likelihood of a patient having a stroke. The interactive interface is based on [**Streamlit**](https://stroke.streamlit.app/), which allows you to easily interact with the model and analyze the results.
+
+<img src="images/1.jpg" alt="brain" width="500" height="300">
+
+## Description
+
+**1. Project objective:** To create an analytical tool to study the risk of stroke in a patient, taking into account various factors
+
+**2. Project objectives:**
+
+**Data analysis**: to identify the factors that influence the cost of renting a house.
+
+- Data analysis: to identify key factors that influence the risk of stroke;
+- Model Building: Use machine learning and statistical analysis to create a model that can predict stroke risk;
+- User Interface: Develop an interactive interface that allows users to enter new data, analyze the results, and make predictions based on the model.
+
+## Technologies
+
+The project was implemented using the following technologies:
+
+- **Python**: the main programming language;
+- **Docker Compose**: to simplify the process of deploying and managing the project in the Docker environment.
+
+## Libraries
+
+- **Pandas**: for data processing;
+- **Numpy**: for numerical calculations;
+- **Scikit-learn**: for building and evaluating machine learning models;
+- **Matplotlib** and **Seaborn**: for data visualization;
+- **Streamlit**: for creating an interactive interface;
+- **Joblib**: for efficient serialization (saving) and loading of Python objects.
+
 ## Dataset
 
 **The dataset used for this project has the following characteristics:**
@@ -25,33 +57,144 @@ This dataset contains 5110 rows with 12 different characteristics:
 - **smoking_status**: smoking status ("formerly smoked", "never smoked", "smokes" or "Unknown");
 - **stroke**: whether a stroke has occurred (0 - no, 1 - yes).
 
+**_Correlation analysis_**
+
+<img src="images/2.jpg" alt="Correlation" width="500" height="300">
+
+# **_Correlation results:_**
+
+❌ **_Positive association with stroke risk_**:
+
+**_age_**: 0.245239 - older people have a higher risk;
+
+**_heart_disease_**: 0.134905 - people with heart disease have a higher risk of stroke;
+
+**_hypertension_**: 0.127891 - people with hypertension have a higher risk of stroke;
+
+**_avg_glucose_level_**: 0.131991 - higher glucose levels are associated with a higher risk of stroke;
+
+**_ever_married_Yes_**: 0.108299 - married people have a slightly higher risk of stroke;
+
+**_smoking_status_formerly smoked_**: 0.064683 - former smokers have a higher risk of stroke;
+
+**_work_type_Self-employed_**: 0.062150 - self-employed persons have a higher risk of stroke;
+
+**_bmi_**: 0.036075 - higher body mass index is associated with higher risk of stroke;
+
+---
+
+❗**_Positive but very weak association_**:
+
+**_Residence_type_Urban_**: 0.015415 - urban residence;
+
+**_work_type_Private_**: 0.011927 - work in the private sector;
+
+**_gender_Male_**: 0.009081 - male gender;
+
+**_smoking_status_smokes_**: 0.008920 - smokers;
+
+**_work_type_Govt_job_**: 0.002660 - work in the civil service;
+
+---
+
+❎ **_Negative but very weak relationship_**:
+
+**_smoking_status_never smoked_**: -0.004163 - people who have never smoked;
+
+**_gender_Female_**: -0.009081 - female gender;
+
+**_work_type_Never_worked_**: -0.014885 - people who have never worked;
+
+**_Residence_type_Rural_**: -0.015415 - rural residence;
+
+---
+
+✅ **_Negative_relationship_**:
+
+**_smoking_status_Unknown_**: -0.055924 - people with unknown smoking status;
+
+**_work_type_children_**: -0.083888 - children have a lower risk of stroke;
+
+**_ever_married_No_**: -0.108299 - unmarried people have a lower risk of stroke.
+
+# **_Model Comparison_**
+
+# 💓**_Summing up_**
+
+The **_LogisticRegression_** model provides stable but generally insufficient performance for the positive class.
+
+If the **_primary goal_** is not to miss patients, i.e. to minimize false negatives, then the key metric is **_Recall_**, namely, the sensitivity for class 1.
+
+Recall determines the proportion of correctly identified patients among all valid patients, which is critical if we are more concerned about the situation when a sick patient is classified as healthy.
+
+The main metric is Recall for the positive class, i.e., minimizing false negatives, and from the results provided, LogisticRegression demonstrates the highest recall for class 1 - 0.74 on the test data.
+
+This means that 74% of sick patients were correctly identified, which is critical if a diagnostic error can lead to a patient being classified as healthy.
+
+However, it's important to remember that high recall can be accompanied by low precision - a lot of false positives. In my case, the precision for class 1 remains low - 0.13, but if the main goal is to minimize missed patients, then logistic regression is the most appropriate.
+
+✅ **_Therefore, if the main goal is not to miss sick patients, then LogisticRegression is the most appropriate model._**
+
+## Run locally
+
+**Clone the repository:**
+
+```
+git clone https://github.com/MariiaSam/Rent-in-Brazil.git
+cd Rent-in-Brazil
+```
+
+**Set up the virtual environment with Poetry**
+
+Set up project dependencies:
+
+```
+poetry install
+```
+
+To activate the virtual environment, run the command:
+
+```
+poetry shell
+```
+
+To add a dependency to a project, run the command:
+
+```
+poetry add <package_name>
+```
+
+To pull in existing dependencies:
+
+```
+poetry install
+```
+
+# Using
+
+Run the Streamlit application with the command:
+
+```
+streamlit run app.py
+```
+
 <!--
-This project was developed to determine the cost of rent in Brazil. The interactive interface is based on [**Streamlit**](https://rent-brazil1.streamlit.app/), which allows you to easily interact with the model and analyze the results.
 
-<img src="images/4.jpg" alt="море" width="500" height="300">
 
-## Description
 
-**1. Project objective:** To create an analytical tool for researching the value of rents in Brazil, including various factors, including regions.
-
-**2. Project tasks:**.
-
-- **Data analysis**: to identify the key factors that influence the cost;
-- **Model building**: using machine learning and statistical analyses to create a model that can predict rental values;
-- **User interface**: develop an interactive interface that will allow users to enter new data, analyze the results and make predictions based on the model.
 
 ## Technologies
 
 The project was implemented using the following technologies:
 
 - **Python**: the main programming language;
-- **Docker Compose**: to simplify the process of deploying and managing the project in the Docker environment.
 
 ## Libraries
 
 - **Pandas**: for data processing;
 - **Numpy**: for numerical calculations;
 - **Scikit-learn**: for building and evaluating machine learning models;
+- **Imbalanced-learn**: tools when dealing with classification with imbalanced classes ;
 - **Matplotlib** and **Seaborn**: for data visualization;
 - **Streamlit**: for creating an interactive interface;
 - **Joblib**: for efficient serialization (saving) and loading of Python objects.
