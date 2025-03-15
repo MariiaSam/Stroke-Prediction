@@ -132,6 +132,17 @@ This dataset contains 5110 rows with 12 different characteristics:
 | Gradient Boosting      | Test    | 0.222222  | 0.040000 | 0.067797 | 0.946184 |
 | Balanced Random Forest | Test    | 0.153846  | 0.720000 | 0.253521 | 0.792564 |
 
+**Confusion matrix _LogisticRegression_**
+<img src="images/3.png" alt="brain" width="600" height="500">
+
+**Confusion matrix _LogisticRegression_**
+<img src="images/8.png" alt="brain" width="600" height="500">
+
+<img src="images/4.png" alt="brain" width="600" height="500">
+<img src="images/5.png" alt="brain" width="600" height="500">
+<img src="images/6.png" alt="brain" width="600" height="500">
+<img src="images/7.png" alt="brain" width="600" height="500">
+
 # 💓**_Summing up_**
 
 **_LogisticRegression_** and **_BalancedRandomForestClassifier_** show the highest sensitivity on the test dataset. However, considering also other metrics such as precision and F1-measure, the balanced random forest may be a more suitable choice for this task.
@@ -147,11 +158,6 @@ This means that 74% and 72% of sick patients, respectively, were correctly ident
 However, it is important to remember that a high level of memorization can be accompanied by low accuracy - a large number of false positives. In my case, the accuracy for class 1 remains low for LogisticRegression - 0.13 and for BalancedRandomForestClassifier - 0.15.
 
 ✅ **_Therefore, if the main goal is not to miss sick patients, then LogisticRegression is the most appropriate model._**
-
-<img src="images/4.jpg" alt="brain" width="600" height="500">
-<img src="images/5.jpg" alt="brain" width="600" height="500">
-<img src="images/6.jpg" alt="brain" width="600" height="500">
-<img src="images/7.jpg" alt="brain" width="600" height="500">
 
 ## Run locally
 
@@ -195,38 +201,3 @@ Run the Streamlit application with the command:
 ```
 streamlit run app.py
 ```
-
-```
-docker run --rm -d -p 8880:8880 rentinbrazil:latest
-```
-
---rm - automatically removes the container after stopping;
-
--d - runs the container in the background;
-
--p 8880:8880 - displays port 8880 on the local machine to access the application.
-
-**2. Access to the application:**
-
-After starting the container, the application will be available at the address:
-
-```
-http://localhost:8880
-```
-
-3. **Stopping the project:**
-
-To stop the project, do:
-
-```
-docker ps
-```
-
-Then use the command to stop the container:
-
-```
-docker stop <container_id>
-```
-
-Where <container_id> is your container's identifier, obtained from the docker ps command.
-''' -->
