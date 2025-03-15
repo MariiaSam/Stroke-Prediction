@@ -133,10 +133,10 @@ This dataset contains 5110 rows with 12 different characteristics:
 | Balanced Random Forest | Test    | 0.153846  | 0.720000 | 0.253521 | 0.792564 |
 
 **Confusion matrix _LogisticRegression_**
-<img src="images/3.png" alt="brain" width="600" height="500">
+<img src="images/3.png" alt="brain">
 
 **Confusion matrix _LogisticRegression_**
-<img src="images/8.png" alt="brain" width="600" height="500">
+<img src="images/8.png" alt="brain">
 
 <img src="images/4.png" alt="brain" width="600" height="500">
 <img src="images/5.png" alt="brain" width="600" height="500">
