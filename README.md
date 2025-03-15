@@ -132,10 +132,10 @@ This dataset contains 5110 rows with 12 different characteristics:
 | Gradient Boosting      | Test    | 0.222222  | 0.040000 | 0.067797 | 0.946184 |
 | Balanced Random Forest | Test    | 0.153846  | 0.720000 | 0.253521 | 0.792564 |
 
-**Confusion matrix _LogisticRegression_**
+**Confusion matrix LogisticRegression**
 <img src="images/3.png" alt="brain">
 
-**Confusion matrix _LogisticRegression_**
+**Confusion matrix BalancedRandomForestClassifier**
 <img src="images/8.png" alt="brain">
 
 <img src="images/4.png" alt="brain" width="600" height="500">
