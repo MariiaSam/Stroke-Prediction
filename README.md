@@ -4,7 +4,7 @@
 
 This project was developed to determine the likelihood of a patient having a stroke. The interactive interface is based on [**Streamlit**](https://stroke.streamlit.app/), which allows you to easily interact with the model and analyze the results.
 
-<img src="images/1.jpg" alt="brain" width="500" height="300">
+<img src="images/1.jpg" alt="brain" width="600" height="500">
 
 ## Description
 
@@ -59,7 +59,7 @@ This dataset contains 5110 rows with 12 different characteristics:
 
 **_Correlation analysis_**
 
-<img src="images/2.jpg" alt="Correlation" width="500" height="300">
+<img src="images/2.png" alt="Correlation" width="500" height="300">
 
 # **_Correlation results:_**
 
