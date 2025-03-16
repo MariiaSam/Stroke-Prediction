@@ -30,6 +30,7 @@ The project was implemented using the following technologies:
 - **Pandas**: for data processing;
 - **Numpy**: for numerical calculations;
 - **Scikit-learn**: for building and evaluating machine learning models;
+- **Imbalanced-learn**: provides tools when dealing with classification with imbalanced classes;
 - **Matplotlib** and **Seaborn**: for data visualization;
 - **Streamlit**: for creating an interactive interface;
 - **Joblib**: for efficient serialization (saving) and loading of Python objects.
