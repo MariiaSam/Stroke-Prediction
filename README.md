@@ -2,7 +2,7 @@
 
 # A model for predicting the risk of stroke in a patient
 
-This project was developed to determine the likelihood of a patient having a stroke. The interactive interface is based on [**Streamlit**](https://stroke.streamlit.app/), which allows you to easily interact with the model and analyze the results.
+This project was developed to determine the likelihood of a patient having a stroke. The interactive interface is based on [**Streamlit**](https://stroke-prediction-ms.streamlit.app/), which allows you to easily interact with the model and analyze the results.
 
 <img src="images/1.jpg" alt="brain" width="600" height="500">
 
