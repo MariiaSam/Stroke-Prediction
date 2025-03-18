@@ -34,16 +34,16 @@ def main():
     with st.form("data_form"):
         st.header("Input the data")
 
-        gender = st.selectbox('Gender', ["Male", "Female"], index=None, help='Patient`s gender', label_visibility="visible")
-        age = st.number_input('Age', min_value=0, value=None, help='Patient`s age',  placeholder="Enter age")
-        hypertension = st.selectbox('The presence of hypertension', [0, 1], index=None, help='(0 - no, 1 - yes)', label_visibility="visible")
-        heart_disease = st.selectbox('The presence of heart disease', [0, 1], index=None, help='(0 - no, 1 - yes)', label_visibility="visible")
-        ever_married = st.selectbox('Does the patient have a marriage?', ["No", "Yes"], index=None, help='"No", "Yes"', label_visibility="visible")
-        work_type = st.selectbox('Patient`s occupation', ["Children", "Govt_jov", "Never_worked", "Private", "Self-employed"], index=None, label_visibility="visible")
-        Residence_type = st.selectbox('Patient`s place of residence', ["Rural", "Urban"], index=None, label_visibility="visible")
-        avg_glucose_level = st.number_input('avg_glucose_level',  min_value=0,  value=None, help='Patient`s averageblood glucose level', placeholder="avg glucose level")
+        gender = st.selectbox('Gender', ["Male", "Female"], index=None, help='Patient`s gender', label_visibility="visible", placeholder="choose an option")
+        age = st.number_input('Age', min_value=0, value=None, help='Patient`s age',  placeholder="enter age")
+        hypertension = st.selectbox('The presence of hypertension', [0, 1], index=None, help='(0 - no, 1 - yes)', label_visibility="visible", placeholder="choose an option")
+        heart_disease = st.selectbox('The presence of heart disease', [0, 1], index=None, help='(0 - no, 1 - yes)', label_visibility="visible", placeholder="choose an option")
+        ever_married = st.selectbox('Does the patient have a marriage?', ["No", "Yes"], index=None, help='"No", "Yes"', label_visibility="visible", placeholder="choose an option")
+        work_type = st.selectbox('Patient`s occupation', ["Children", "Govt_jov", "Never_worked", "Private", "Self-employed"], index=None, label_visibility="visible", placeholder="choose an option")
+        Residence_type = st.selectbox('Patient`s place of residence', ["Rural", "Urban"], index=None, label_visibility="visible", placeholder="choose an option")
+        avg_glucose_level = st.number_input('avg_glucose_level',  min_value=0,  value=None, help='Patient`s averageblood glucose level', placeholder="avg glucose level" )
         bmi =  st.number_input('Body mass index', min_value=0,  value=None, help='Patient`s bmi', placeholder="bmi")
-        smoking_status = st.selectbox('Smoking status of the patient', ["Formerly smoked", "Never smoked", "Smokes", "Unknown"], index=None, label_visibility="visible"    )
+        smoking_status = st.selectbox('Smoking status of the patient', ["Formerly smoked", "Never smoked", "Smokes", "Unknown"], index=None, label_visibility="visible", placeholder="choose an option")
 
         btn = st.form_submit_button("Check")
 
