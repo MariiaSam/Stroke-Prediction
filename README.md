@@ -12,18 +12,17 @@ This project was developed to determine the likelihood of a patient having a str
 
 **2. Project objectives:**
 
-**Data analysis**: to identify the factors that influence the cost of renting a house.
+**Data analysis**: to identify the factors that influence to the risk of stroke in a patient.
 
-- Data analysis: to identify key factors that influence the risk of stroke;
-- Model Building: Use machine learning and statistical analysis to create a model that can predict stroke risk;
-- User Interface: Develop an interactive interface that allows users to enter new data, analyze the results, and make predictions based on the model.
+- data analysis: to identify key factors that influence the risk of stroke;
+- model Building: use machine learning and statistical analysis to create a model that can predict stroke risk;
+- user Interface: develop an interactive interface that allows users to enter new data, analyze the results, and make predictions based on the model.
 
 ## Technologies
 
 The project was implemented using the following technologies:
 
-- **Python**: the main programming language;
-- **Docker Compose**: to simplify the process of deploying and managing the project in the Docker environment.
+- **Python**: the main programming language
 
 ## Libraries
 
@@ -84,7 +83,7 @@ This dataset contains 5110 rows with 12 different characteristics:
 
 ---
 
-❗**_Positive but very weak association_**:
+❗**Positive but very weak association**:
 
 **_Residence_type_Urban_**: 0.015415 - urban residence;
 
@@ -144,9 +143,9 @@ This dataset contains 5110 rows with 12 different characteristics:
 <img src="images/6.png" alt="brain" width="600" height="500">
 <img src="images/7.png" alt="brain" width="600" height="500">
 
-# 💓**_Summing up_**
+# 💓**Summing up**
 
-**_LogisticRegression_** and **_BalancedRandomForestClassifier_** show the highest sensitivity on the test dataset. However, considering also other metrics such as precision and F1-measure, the balanced random forest may be a more suitable choice for this task.
+**_LogisticRegression_** and **_BalancedRandomForestClassifier_** show the highest sensitivity on the test dataset. However, considering also other metrics such as precision and F1-measure, the BalancedRandomForestClassifier may be a more suitable choice for this task.
 
 If the **_primary goal_** is not to miss patients, i.e. minimize false negatives, then the key metric is **_Recall_**, namely the sensitivity for class 1.
 
